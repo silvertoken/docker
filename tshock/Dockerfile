@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:7
 
 MAINTAINER silvertoken <silvertoken99@gmail.com>
 
@@ -16,10 +16,10 @@ RUN yum install -y \
 
 
 # Download and install TShock
-ENV TSHOCK_VERSION=pre1-4.3.21-1.26-2.0.0.9 \
-    TSHOCK_FILE=tshock_mintaka_prere_1
+ENV TSHOCK_VERSION=v4.3.26 \
+    TSHOCK_FILE=tshock_4.3.26
 
-ADD https://github.com/NyxStudios/TShock/releases/download/mintaka-$TSHOCK_VERSION/$TSHOCK_FILE.zip /
+ADD https://github.com/NyxStudios/TShock/releases/download/$TSHOCK_VERSION/$TSHOCK_FILE.zip /
 RUN mkdir /world /config /logs /plugins && \
 	unzip $TSHOCK_FILE.zip && \
 	rm $TSHOCK_FILE.zip && \
