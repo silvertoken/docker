@@ -1,6 +1,6 @@
 FROM centos:7
 
-MAINTAINER silvertoken <silvertoken99@gmail.com>
+MAINTAINER silvertoken <1569232+silvertoken@users.noreply.github.com>
 
 # Add mono repository
 # Update and install mono
